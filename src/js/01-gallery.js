@@ -3,6 +3,7 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 
 import { galleryItems } from './gallery-items.js';
 
+
 document.addEventListener('DOMContentLoaded', function () {
   const gallery = document.querySelector('.gallery');
 
