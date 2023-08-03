@@ -15,14 +15,10 @@ player.on('timeupdate', function(data) {
 const throttle = require('lodash.throttle');
 
 function saveCurrentTimeInLocalStorage(currentTime) {
-  const lastUpdateTime = localStorage.getItem("videoplayer-last-update");
-
   const currentTimeInMillis = new Date().getTime();
 
-  if (currentTimeInMillis - parseInt(lastUpdateTime, 10) >= 1000) {
+  if (currentTimeInMillis - parseInt(currentTime, 10) >= 1000) {
     localStorage.setItem("videoplayer-current-time", currentTime);
-
-    localStorage.setItem("videoplayer-last-update", currentTimeInMillis.toString());
   }
 }
 
