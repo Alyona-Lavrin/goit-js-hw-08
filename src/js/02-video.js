@@ -10,7 +10,3 @@ player.setCurrentTime(savedTime);
 player.on('timeupdate', function(data) {
     localStorage.setItem("videoplayer-current-time", data.seconds);
 });
-
-player.getVideoTitle().then(function(title) {
-    console.log('title:', title);
-});
