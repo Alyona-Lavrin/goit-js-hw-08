@@ -7,6 +7,7 @@ const savedTime = localStorage.getItem("videoplayer-current-time");
 
 player.setCurrentTime(savedTime ? savedTime : 0);
 
+
 player.on('timeupdate', function(data) {
     throttledSave(data.seconds);
 });
